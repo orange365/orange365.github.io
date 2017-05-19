@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo11.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo14.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo15.png">
-<meta property="og:updated_time" content="2017-05-19T05:10:15.515Z">
+<meta property="og:updated_time" content="2017-05-19T05:50:54.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo Build personal blogs">
 <meta name="twitter:description" content="1、环境安装 1.1安装Node和Git Node地址：https://nodejs.org/en/download/Git地址：https://git-scm.com/download/win 安装完成之后输入以下命令，检测是否安装成功 1.2安装Hexo1$ npm install -g hexo 2、添加Blog 2.1在电脑中新建一个名字为[Blog]的文件（比如：D:\Blog），在目录">
@@ -244,6 +244,7 @@
 <p>hexo generate<br>生成网站静态文件到默认设置的 public 文件夹。 命令简写：hexo g</p>
 <p>hexo server<br>启动本地服务器，用于预览主题。默认地址：localhost:4000，命令简写：hexo s</p>
 <p>hexo deploy<br>部署到设定的仓库。命令简写：hexo d</p>
+<p>hexo命令组合<br>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s，就是清除、生成、启动<br>hexo clean &amp;&amp; hexo g -d，就是清除、生成、部署</p>
 <p><strong>5、更换博客主题</strong><br>1) 从 Github 上将主题下载下来，放到 /themes 目录下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</div></pre></td></tr></table></figure></p>
 <p>2) 安装主题和渲染器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-renderer-jade --save</div><div class="line">$ npm install hexo-renderer-sass --save</div></pre></td></tr></table></figure></p>
 <p>3) 编辑博客目录下的 _config.yml 文件，将 theme 的值改为 maupassant。<br>4) 接着就是执行 hexo clean，hexo generate，hexo deploy 三部曲了。  </p>
@@ -466,10 +467,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
@@ -479,6 +476,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">coffeescript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,10 +507,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">安全</a>
               </li>
              
@@ -518,7 +515,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">octopress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

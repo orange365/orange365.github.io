@@ -27,7 +27,8 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo10.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo11.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo14.png">
-<meta property="og:updated_time" content="2017-05-19T02:43:25.410Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/github-hexo15.png">
+<meta property="og:updated_time" content="2017-05-19T05:10:15.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo Build personal blogs">
 <meta name="twitter:description" content="1、环境安装 1.1安装Node和Git Node地址：https://nodejs.org/en/download/Git地址：https://git-scm.com/download/win 安装完成之后输入以下命令，检测是否安装成功 1.2安装Hexo1$ npm install -g hexo 2、添加Blog 2.1在电脑中新建一个名字为[Blog]的文件（比如：D:\Blog），在目录">
@@ -200,6 +201,7 @@
 <p>2.1在电脑中新建一个名字为[Blog]的文件（比如：D:\Blog），在目录右健打开Git Bash。</p>
 <p>执行git命令，自动在Blog下创建网站所需的文件（可以忽略执行过程中有错误提示）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>2.2启动服务</p>
 <p>执行git命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -238,6 +240,18 @@
 <p>这时候说明能够通过SSH链接到你的Github了，接下来完善一下你的完善。Git会根据用户的名字和邮箱来记录提交。<br>GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;Tim&quot; #用户名 </div><div class="line">$ git config --global user.email &quot;tim@gmail.com&quot; #填写自己的邮箱</div></pre></td></tr></table></figure></p>
 <p>3.8发布更新博客<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure></p>
 <p>如果失败，请修改配置文件_config.yml。成功则可忽略<br><img src="/assets/blogImg/github-hexo14.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:   </div><div class="line">  <span class="built_in">type</span>:   git</div><div class="line">  repo:    https://github.com/xxx/xxx.github.io.git</div><div class="line">  branch:   master</div></pre></td></tr></table></figure></p>
+<p><strong>4、写一篇文章</strong><br>4.1输入创建文章命令，生成一个md文件(/blog/source/_posts/)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"hello"</span></div></pre></td></tr></table></figure></p>
+<p><img src="/assets/blogImg/github-hexo15.png" alt=""></p>
+<p>用编辑器打开hello.md文件,编写完后保存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">title: hello</div><div class="line">date: 2017-05-18 12:37:23</div><div class="line">categories:</div><div class="line">  - 日志</div><div class="line">  - 二级目录</div><div class="line">tags:</div><div class="line">  - hello</div><div class="line">---</div><div class="line">摘要:</div><div class="line">&lt;!--more--&gt;</div><div class="line">正文:</div></pre></td></tr></table></figure>
+<p>4.2每次部署的步骤，可按以下步骤来进行。<br>hexo clean<br>清除缓存文件 db.json 和已生成的静态文件 public 。</p>
+<p>hexo generate<br>生成网站静态文件到默认设置的 public 文件夹。 命令简写：hexo g</p>
+<p>hexo server<br>启动本地服务器，用于预览主题。默认地址：localhost:4000，命令简写：hexo s</p>
+<p>hexo deploy<br>部署到设定的仓库。命令简写：hexo d</p>
+<p><strong>5、更换博客主题</strong><br>1) 从 Github 上将主题下载下来，放到 /themes 目录下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</div></pre></td></tr></table></figure></p>
+<p>2) 安装主题和渲染器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-renderer-jade --save</div><div class="line">$ npm install hexo-renderer-sass --save</div></pre></td></tr></table></figure></p>
+<p>3) 编辑博客目录下的 _config.yml 文件，将 theme 的值改为 maupassant。<br>4) 接着就是执行 hexo clean，hexo generate，hexo deploy 三部曲了。  </p>
+<p>另外这个主题也是挺不错的，<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia</a><br>最后，附上更多的hexo主题，大家可以狠戳<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">这里</a>选择你自己喜好的主题。</p>
 
       
 
@@ -456,15 +470,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">coffeescript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">html5</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">coffeescript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,11 +558,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">性能</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">性能</a>
+                <a href="javascript:void(0)" class="js-tag color3">模式</a>
               </li>
             
             <div class="clearfix"></div>

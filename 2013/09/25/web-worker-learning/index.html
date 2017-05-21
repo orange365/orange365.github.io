@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="">
   <title>web worker简易入门 | 大橙子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="js是单线程的语言，由于此特性，我们在处理并发时需要用到一些技巧，如setTimeout()，setInterval()，调用XMLHttpRequest等。但这里的并发只是非阻塞（参照John Resig的文章How JavaScript Timers Work），真正的多线程编程则需要HTML5的web worker。">
 <meta name="keywords" content="html5,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web worker简易入门">
-<meta property="og:url" content="http://yoursite.com/2013/09/25/web-worker-learning/index.html">
+<meta property="og:url" content="/2013/09/25/web-worker-learning/index.html">
 <meta property="og:site_name" content="大橙子的博客">
 <meta property="og:description" content="js是单线程的语言，由于此特性，我们在处理并发时需要用到一些技巧，如setTimeout()，setInterval()，调用XMLHttpRequest等。但这里的并发只是非阻塞（参照John Resig的文章How JavaScript Timers Work），真正的多线程编程则需要HTML5的web worker。">
-<meta property="og:image" content="http://yoursite.com/assets/blogImg/web_worker1.png">
-<meta property="og:image" content="http://yoursite.com/assets/blogImg/web_worker2.png">
+<meta property="og:image" content="/assets/blogImg/web_worker1.png">
+<meta property="og:image" content="/assets/blogImg/web_worker2.png">
 <meta property="og:updated_time" content="2016-12-30T22:16:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web worker简易入门">
 <meta name="twitter:description" content="js是单线程的语言，由于此特性，我们在处理并发时需要用到一些技巧，如setTimeout()，setInterval()，调用XMLHttpRequest等。但这里的并发只是非阻塞（参照John Resig的文章How JavaScript Timers Work），真正的多线程编程则需要HTML5的web worker。">
-<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/web_worker1.png">
+<meta name="twitter:image" content="/assets/blogImg/web_worker1.png">
   
     <link rel="alternative" href="/atom.xml" title="大橙子的博客" type="application/atom+xml">
   
@@ -53,7 +53,7 @@
 			<img src="/assets/img/avatar.JPG" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Big Orange</a></h1>
+		  <h1 class="header-author"><a href="/">Orange</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">人生在勤，不索何获</p>
@@ -111,7 +111,7 @@
 				<img src="/assets/img/avatar.JPG" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Big Orange</h1>
+			  <h1 class="header-author js-header-author">Orange</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>人生在勤，不索何获<i class="icon icon-quo-right"></i></p>
@@ -318,27 +318,6 @@ function tryWorker(){
       
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
     </div>
     <div class="article-info article-info-index">
       
@@ -408,7 +387,7 @@ function tryWorker(){
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2013/09/25/web-worker-learning/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:/2013/09/25/web-worker-learning/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -432,8 +411,8 @@ function tryWorker(){
     </a>
   
   
-    <a href="/2013/09/10/my-fairy-tale2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【梦中的小偷】【织梦人的表白】</div>
+    <a href="/2013/08/20/oauth-rabbit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">兔子，胡萝卜与OAuth的故事</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -459,7 +438,7 @@ function tryWorker(){
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Big Orange
+    		&copy; 2017 Orange
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -541,7 +520,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
+                <a href="javascript:void(0)" class="js-tag color2">hexo博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,7 +536,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">coffeescript</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -561,19 +544,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">css3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旧事</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅行</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,31 +568,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">octopress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">主题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -637,11 +584,27 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">性能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">css3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">产品经理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅行</a>
               </li>
             
             <div class="clearfix"></div>
